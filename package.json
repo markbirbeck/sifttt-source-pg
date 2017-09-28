@@ -1,0 +1,7 @@
+{
+  "name": "sifttt-source-pg",
+  "version": "0.1.0",
+  "description": "A sifttt source for Postgres.",
+  "license": "MIT",
+  "repository": "markbirbeck/sifttt-source-pg"
+}
