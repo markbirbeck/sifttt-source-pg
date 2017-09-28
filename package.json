@@ -2,8 +2,14 @@
   "name": "sifttt-source-pg",
   "version": "0.1.0",
   "description": "A sifttt source for Postgres.",
+  "scripts": {
+    "test": "docker-compose up --build --abort-on-container-exit"
+  },
   "license": "MIT",
   "repository": "markbirbeck/sifttt-source-pg",
+  "engines" : {
+    "node" : ">=6 <7"
+  },
   "dependencies": {
     "highland": "^2.10.2",
     "pg": "^7.3.0",
