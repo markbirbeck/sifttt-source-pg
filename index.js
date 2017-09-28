@@ -35,8 +35,13 @@ class PgSource {
       this._client.connect()
       .then(() => {
         const query = new QueryStream(this._source, this._params);
+        const stream = this._client.query(query);
 
-        return this._client.query(query)
+        stream.on('end', () => {
+          this._client.end();
+        });
+
+        return stream
         .pipe(h())
         ;
       })
